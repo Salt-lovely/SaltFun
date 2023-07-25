@@ -1,0 +1,19 @@
+name: HelloWorld
+main: salt.saltfun.Saltfun
+version: 0.0.1
+api-version: 1.16
+
+commands:
+  saltfun:
+    aliases:
+      - "sf"
+    usage: /<command> reload
+
+permissions:
+  saltfun.reload:
+    description: reload Saltfun config
+    default: op
+  # saltfun.farm.:
+  #   description: 
+  #   default: true
+
