@@ -1,4 +1,4 @@
-name: HelloWorld
+name: Saltfun
 main: salt.saltfun.Saltfun
 version: 0.0.1
 api-version: 1.16

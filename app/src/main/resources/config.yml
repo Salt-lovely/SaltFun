@@ -1,0 +1,89 @@
+# 开启DeBug模式
+debug: false
+# 树叶快速凋亡功能
+leaves-decay:
+  # 启用这个功能
+  enable: true
+  # 树叶凋亡延迟，不能小于2，因为树叶是否可以凋亡的判定有延迟
+  decay-delay: 4
+  # 每次树叶凋亡最多破坏多少方块，设为小于0可以禁用这个限制
+  max-blocks-one-time: 48
+  # 树叶凋亡音效，0 没有音效，1 较少音效，2 每个树叶凋亡时都触发音效（非常吵）
+  decay-sound: 1
+  # 树叶凋亡粒子效果，0 没有粒子，1 较少粒子，2 完整粒子效果（可能会卡顿）
+  decay-particle: 1
+  # 是否监听树叶自然凋亡事件，树叶自然凋亡时将触发周围树叶快速凋亡
+  listen-decay: true
+  # 是否监听方块破坏事件，比如破坏原木触发树叶快速凋亡
+  listen-block-destroy: true
+  # 监听哪些方块的破坏事件，置空默认监听所有的木头和树叶
+  blocks:
+    # 原木
+    # - oak_log #  橡木原木
+    # - stripped_oak_log #  去皮橡木原木
+    # - spruce_log #  云杉原木
+    # - stripped_spruce_log #  去皮云杉原木
+    # - birch_log #  白桦原木
+    # - stripped_birch_log #  去皮白桦原木
+    # - jungle_log #  丛林原木
+    # - stripped_jungle_log #  去皮丛林原木
+    # - acacia_log #  金合欢原木
+    # - stripped_acacia_log #  去皮金合欢原木
+    # - dark_oak_log #  深色橡木原木
+    # - stripped_dark_oak_log #  去皮深色橡木原木
+    # - mangrove_log #  红树原木
+    # - stripped_mangrove_log #  去皮红树原木
+    # - cherry_log #  樱花原木
+    # - stripped_cherry_log #  去皮樱花原木
+    # - crimson_stem #  绯红菌柄
+    # - stripped_crimson_stem #  去皮绯红菌柄
+    # - warped_stem #  诡异菌柄
+    # - stripped_warped_stem #  去皮诡异菌柄
+    # - bamboo_block #  竹块
+    # - stripped_bamboo_block #  去皮竹块
+
+    # 木头（六面都是树皮）
+    # - oak_wood #  橡木
+    # - stripped_oak_wood #  去皮橡木
+    # - spruce_wood #  云杉木
+    # - stripped_spruce_wood #  去皮云杉木
+    # - birch_wood #  白桦木
+    # - stripped_birch_wood #  去皮白桦木
+    # - jungle_wood #  丛林木
+    # - stripped_jungle_wood #  去皮丛林木
+    # - acacia_wood #  金合欢木
+    # - stripped_acacia_wood #  去皮金合欢木
+    # - dark_oak_wood #  深色橡木
+    # - stripped_dark_oak_wood #  去皮深色橡木
+    # - mangrove_wood #  红树木
+    # - stripped_mangrove_wood #  去皮红树木
+    # - cherry_wood #  樱花木
+    # - stripped_cherry_wood #  去皮樱花木
+    # - crimson_hyphae #  绯红菌核
+    # - stripped_crimson_hyphae #  去皮绯红菌核
+    # - warped_hyphae #  诡异菌核
+    # - stripped_warped_hyphae #  去皮诡异菌核
+
+    # 树叶 见下文
+
+  # 哪些树叶可以快速凋亡，置空表示没有限制
+  leaves:
+    # - oak_leaves # 橡树树叶
+    # - spruce_leaves #云杉树叶
+    # - birch_leaves #白桦树叶
+    # - jungle_leaves #丛林树叶
+    # - acacia_leaves #金合欢树叶
+    # - dark_oak_leaves #深色橡树树叶
+    # - mangrove_leaves #红树树叶
+    # - azalea_leaves #杜鹃树叶
+    # - cherry_leaves #樱花树叶
+    # - flowering_azalea_leaves #盛开的杜鹃树叶
+
+# 耕地保护功能
+farm:
+  # 启用这个功能
+  enable: true
+  # 阻止玩家踩坏耕地
+  prevent-player-destroy: true
+  # 阻止动物踩坏耕地
+  prevent-entity-destroy: true
