@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.Tag;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -50,6 +51,17 @@ public class Utils {
             return false;
         var l = (Leaves) block.getBlockData();
         return !l.isPersistent() && l.getDistance() > 6;
+    }
+
+    /**
+     * 检查一个方块是否为耕地方块
+     * 
+     * @param block 方块
+     * @return 如果为`true`则为耕地方块
+     */
+    public static boolean isFarmland(@NotNull Block block){
+        var f = block.getType();
+        return f.name().equalsIgnoreCase("FARMLAND");
     }
 
     private static final List<BlockFace> surroundFace = Arrays
