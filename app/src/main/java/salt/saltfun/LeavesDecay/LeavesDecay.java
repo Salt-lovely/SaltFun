@@ -58,7 +58,7 @@ public class LeavesDecay {
         scheduled = true;
         Utils.debug("[快速落叶] 调度器开始");
         // 等待8tick，让树叶的distance属性传播完成
-        scheduledTask = Bukkit.getScheduler().runTaskLater(instance, this::schedulerTick, 8l);
+        scheduledTask = Bukkit.getScheduler().runTaskLater(instance, this::schedulerTick, Config.LeavesDecayDecayDelay);
     }
 
     /**
@@ -258,5 +258,9 @@ public class LeavesDecay {
         plannedBlocks.clear();
         soundPlayedLocations.clear();
         stopScheduler();
+    }
+
+    public Saltfun getInstance() {
+        return instance;
     }
 }

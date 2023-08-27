@@ -1,5 +1,6 @@
 package salt.saltfun.LeavesDecay;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -20,8 +21,10 @@ public class LeavesDecayListener implements Listener {
     public void onBlockBreak(BlockBreakEvent event) {
         var b = event.getBlock();
         if (Config.LeavesDecayListenBlockDestroy && main.isThatBlock(b) && !main.isScheduled(b)) {
-            main.scheduleSurroundBlocks(b);
-            main.startScheduler();
+            Bukkit.getScheduler().runTaskLater(main.getInstance(), () -> {
+                main.scheduleSurroundBlocks(b);
+                main.startScheduler();
+            }, 8l); // 树叶是否可腐烂（distance）的数值传播需要时间
         }
     }
 
